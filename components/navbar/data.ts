@@ -1,4 +1,15 @@
 import { HeartOutlined, GlobalOutlined } from "@ant-design/icons";
+import BackToSchool from "./link-details/BackToSchool";
+import Men from "./link-details/Men";
+import Women from "./link-details/Women";
+import Kids from "./link-details/Kids";
+import Accessories from "./link-details/Accessories";
+import Brands from "./link-details/Brands";
+import Collections from "./link-details/Collections";
+import OnlyAtJD from "./link-details/OnlyAtJD";
+import NewIn from "./link-details/NewIn";
+import EgiftCard from "./link-details/EgiftCard";
+import Savings from "./link-details/Savings";
 
 export const topDataLinks = [
   {
@@ -30,35 +41,35 @@ export const navlinks = [
   },
   {
     label: "Men",
-    component: null,
+    component: Men,
   },
   {
     label: "Women",
-    component: null,
+    component: Women,
   },
   {
     label: "Kids",
-    component: null,
+    component: Kids,
   },
   {
     label: "Accessories",
-    component: null,
+    component: Accessories,
   },
   {
     label: "Brands",
-    component: null,
+    component: Brands,
   },
   {
     label: "Collections",
-    component: null,
+    component: Collections,
   },
   {
     label: "Only at JD",
-    component: null,
+    component: OnlyAtJD,
   },
   {
     label: "New in",
-    component: null,
+    component: NewIn,
   },
   {
     label: "eGiftcard",
@@ -66,6 +77,6 @@ export const navlinks = [
   },
   {
     label: "Savings",
-    component: null,
+    component: Savings,
   },
 ];

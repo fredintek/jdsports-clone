@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { navlinks, topDataLinks } from "./data";
 import TopLink from "./TopLink";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -11,8 +11,14 @@ import Navlink from "./Navlink";
 
 type Props = {};
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const [hoveredLink, setHoveredLink] = useState<null | string>(null);
+
+  const NavComponent = useCallback(
+    () => navlinks?.find((item) => item.label === hoveredLink)?.component,
+    [hoveredLink]
+  );
+
   return (
     <nav>
       {/* desktop */}
@@ -74,16 +80,7 @@ const Navbar = (props: Props) => {
           </div>
           {hoveredLink && (
             <div className="relative bg-white border-t z-50 p-12">
-              <p>fredintek</p>
-              <p>fredintek</p>
-              <p>fredintek</p>
-              <p>fredintek</p>
-              <p>fredintek</p>
-              <p>fredintek</p>
-              <p>fredintek</p>
-              <p>fredintek</p>
-              <p>fredintek</p>
-              <p>fredintek</p>
+              nav component goes here
             </div>
           )}
           <div className="flex items-center justify-center bg-bg-1">
