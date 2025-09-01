@@ -3,7 +3,7 @@ import React from "react";
 type Props = {
   label: string;
   hoveredLink: string | null;
-  active?: boolean;
+  active?: any;
   setHoveredLink?: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
@@ -11,8 +11,8 @@ const Navlink = ({ label, hoveredLink, active, setHoveredLink }: Props) => {
   return (
     <div>
       <div
-        onMouseEnter={() => setHoveredLink!(label)}
-        onMouseLeave={() => setHoveredLink!(null)}
+        onMouseEnter={() => setHoveredLink?.(label)}
+        // onMouseLeave={() => setHoveredLink!(null)}
         className={`relative px-4 py-3 cursor-pointer text-lg ${
           hoveredLink
             ? hoveredLink === label

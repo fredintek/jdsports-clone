@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { navlinks, topDataLinks } from "./data";
 import TopLink from "./TopLink";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -18,6 +18,8 @@ const Navbar = () => {
     () => navlinks?.find((item) => item.label === hoveredLink)?.component,
     [hoveredLink]
   );
+
+  const ComponentToRender = NavComponent();
 
   return (
     <nav>
@@ -67,22 +69,28 @@ const Navbar = () => {
 
         {/* bottom */}
         <div>
-          <div className="flex justify-center container">
-            {navlinks?.map((item, idx: number) => (
-              <Navlink
-                active={hoveredLink === item.label}
-                hoveredLink={hoveredLink}
-                setHoveredLink={setHoveredLink}
-                key={idx}
-                label={item.label}
-              />
-            ))}
-          </div>
-          {hoveredLink && (
-            <div className="relative bg-white border-t z-50 p-12">
-              nav component goes here
+          <div
+            className="relative"
+            onMouseEnter={() => {}}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            <div className="flex justify-center container">
+              {navlinks?.map((item, idx: number) => (
+                <Navlink
+                  active={hoveredLink === item.label && ComponentToRender}
+                  hoveredLink={hoveredLink}
+                  setHoveredLink={setHoveredLink}
+                  key={idx}
+                  label={item.label}
+                />
+              ))}
             </div>
-          )}
+            {hoveredLink && ComponentToRender && (
+              <div className="relative bg-white border-t z-50 p-12">
+                {<ComponentToRender />}
+              </div>
+            )}
+          </div>
           <div className="flex items-center justify-center bg-bg-1">
             <div className="flex flex-col items-center px-16 py-2 cursor-pointer">
               <p className="uppercase text-sm font-bold">Must have</p>
