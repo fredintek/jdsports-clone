@@ -72,6 +72,41 @@ export const menData: DataType[] = [
   },
 ];
 
+export const savingsData: DataType[] = [
+  {
+    type: "normal",
+    content: {
+      title: "Sale",
+      links: [],
+    },
+  },
+  {
+    type: "normal",
+    content: {
+      title: "Outlet",
+      links: [],
+    },
+  },
+  {
+    type: "normal",
+    content: {
+      title: "Smart Buys",
+      links: [],
+    },
+  },
+  {
+    type: "normal",
+    content: {
+      title: "All Savings",
+      links: [],
+    },
+  },
+  {
+    type: "featured",
+    image: "/images/savings-img.jpg",
+  },
+];
+
 export const womenData: DataType[] = [
   {
     type: "normal",
@@ -394,5 +429,147 @@ export const onlyAtJdData = [
   {
     img: "/images/only-3.jpg",
     title: "Kid's",
+  },
+];
+
+export const newInData = [
+  {
+    img: "/images/men-featured.jpg",
+    title: "Men",
+  },
+  {
+    img: "/images/women-featured.jpg",
+    title: "Women",
+  },
+  {
+    img: "/images/kids-featured.jpg",
+    title: "Kids",
+  },
+  {
+    img: "/images/newin-featured.jpg",
+    title: "Accessories",
+  },
+];
+
+export const brandsData = [
+  {
+    img: "/images/adidas-logo.jpg",
+    title: "Adidas",
+  },
+  {
+    img: "/images/columbia-logo.jpg",
+    title: "Columbia",
+  },
+  {
+    img: "/images/daily-szn-logo.jpg",
+    title: "Daily SZN",
+  },
+  {
+    img: "/images/hoka-logo.jpg",
+    title: "Hoka",
+  },
+  {
+    img: "/images/lacoste-logo.jpg",
+    title: "Lacoste",
+  },
+  {
+    img: "/images/nb-logo.jpg",
+    title: "New Balance",
+  },
+  {
+    img: "/images/on-logo.jpg",
+    title: "On",
+  },
+  {
+    img: "/images/reebook-logo.jpg",
+    title: "Reebook",
+  },
+  {
+    img: "/images/timberland-logo.jpg",
+    title: "Timberland",
+  },
+  {
+    img: "/images/under-armour-logo.jpg",
+    title: "Under Armour",
+  },
+  {
+    img: "/images/asics-logo.jpg",
+    title: "ASICS",
+  },
+  {
+    img: "/images/converse-logo.jpg",
+    title: "Converse",
+  },
+  {
+    img: "/images/ea7-logo.jpg",
+    title: "EA7 Emporio Armani",
+  },
+  {
+    img: "/images/hoodrich-logo.jpg",
+    title: "Hoodrich",
+  },
+  {
+    img: "/images/levi-logo.jpg",
+    title: "Levi's",
+  },
+  {
+    img: "/images/new-era-logo.jpg",
+    title: "New Era",
+  },
+  {
+    img: "/images/pink-soda-sport-logo.jpg",
+    title: "Pink Soda Sport",
+  },
+  {
+    img: "/images/salomon-logo.jpg",
+    title: "Salomon",
+  },
+  {
+    img: "/images/nf-logo.jpg",
+    title: "The North Face",
+  },
+  {
+    img: "/images/unlike-humans-logo.jpg",
+    title: "Unlike Humans",
+  },
+  {
+    img: "/images/birkenstock-logo.jpg",
+    title: "Birkenstock",
+  },
+  {
+    img: "/images/crocs-logo.jpg",
+    title: "Crocs",
+  },
+  {
+    img: "/images/fila-logo.jpg",
+    title: "FILA",
+  },
+  {
+    img: "/images/jordan-logo.jpg",
+    title: "Jordan",
+  },
+  {
+    img: "/images/mckenzie-logo.jpg",
+    title: "McKenzie",
+  },
+  {
+    img: "/images/nike-logo.jpg",
+    title: "Nike",
+  },
+  {
+    img: "/images/puma-logo.jpg",
+    title: "PUMA",
+  },
+  {
+    img: "/images/supply-demand-logo.jpg",
+    title: "Supply & Demand",
+  },
+  {
+    img: "/images/ugg-logo.jpg",
+    title: "UGG",
+  },
+  {
+    img: "/images/vans-logo.jpg",
+    title: "Vans",
   },
 ];
