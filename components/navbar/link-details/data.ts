@@ -381,3 +381,18 @@ export const collectionsData: DataType[] = [
     },
   },
 ];
+
+export const onlyAtJdData = [
+  {
+    img: "/images/only-1.jpg",
+    title: "Men's",
+  },
+  {
+    img: "/images/only-2.jpg",
+    title: "Women's",
+  },
+  {
+    img: "/images/only-3.jpg",
+    title: "Kid's",
+  },
+];
