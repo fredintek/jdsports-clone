@@ -8,6 +8,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
 import store from "@/redux/store";
+import ScrollToTop from "./SrollToTop";
 
 type Props = {
   children: React.ReactNode;
@@ -22,6 +23,7 @@ const AppWrapper = ({ children }: Props) => {
         <AntdRegistry>
           <Navbar />
           <main className="flex-1 flex flex-col">{children}</main>
+          <ScrollToTop />
           <Footer />
         </AntdRegistry>
         <Toaster />
