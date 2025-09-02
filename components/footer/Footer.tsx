@@ -59,7 +59,7 @@ const Footer = (props: Props) => {
 
       {/* bottom */}
       <div className="bg-white border-y py-10">
-        <div className="container grid grid-cols-4">
+        <div className="container grid grid-cols-2 md:grid-cols-4">
           <FooterBottomLinks
             title="Shopping with JD"
             content={[
@@ -90,7 +90,7 @@ const Footer = (props: Props) => {
         </div>
       </div>
       <div className="bg-white py-5">
-        <div className="container flex items-center justify-between">
+        <div className="container flex flex-col items-center gap-4 md:flex-row md:justify-between">
           <p className="text-center max-w-[320px] text-[13px]">
             Visit our corporate website at www.jdplc.com Copyright © 2025 JD
             Sports All rights reserved. Developed by Sleed.

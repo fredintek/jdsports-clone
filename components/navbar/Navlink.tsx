@@ -13,7 +13,7 @@ const Navlink = ({ label, hoveredLink, active, setHoveredLink }: Props) => {
       <div
         onMouseEnter={() => setHoveredLink?.(label)}
         // onMouseLeave={() => setHoveredLink!(null)}
-        className={`relative px-4 py-3 cursor-pointer text-lg ${
+        className={`relative px-4 py-3 cursor-pointer text-[11px] min-[1361px]:text-lg h-max ${
           hoveredLink
             ? hoveredLink === label
               ? "text-color-1"
