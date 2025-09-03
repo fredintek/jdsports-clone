@@ -1,5 +1,7 @@
+"use client";
 import { CommentOutlined, HeartOutlined } from "@ant-design/icons";
 import React from "react";
+import { motion } from "framer-motion";
 
 const images = [
   "/images/follow-1.jpg",
@@ -61,6 +63,13 @@ const FollowUs = (props: Props) => {
             );
           })}
         </div>
+
+        <motion.div
+          whileTap={{ scale: 0.9 }}
+          className="cursor-pointer mx-auto mt-6 w-[320px] h-[60px] border border-black text-black hover:text-white bg-white hover:bg-black flex justify-center items-center"
+        >
+          <span>Follow us</span>
+        </motion.div>
       </div>
     </section>
   );

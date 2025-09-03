@@ -6,16 +6,14 @@ import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { motion } from "framer-motion";
 
 const sliderImages = [
-  "https://www.jdsports.cy/modules/homeslider/images/3e3589e99bda79baa5122d4f26bab3fa08fcbd4d_Desktop_Hoodies_Trackpants.jpg",
-  "https://www.jdsports.cy/modules/homeslider/images/249de9a007dc6256145779370bece63cf4cf5d1c_Desktop_hoodrich.jpg",
-  "https://www.jdsports.cy/modules/homeslider/images/3135a4f34cfff0b683e37cba4abd429bcc7a5a4b_Desktop_Top_Banner.jpg",
-  "https://www.jdsports.cy/modules/homeslider/images/b3cf23debd06b66ae25bbed15cdc84b697f81a29_Desktop_Top_Banner_HP_1920x840%20%281%29.jpg",
-  "https://www.jdsports.cy/modules/homeslider/images/fde5a3fb92bc3499fb30e8f82300da3449ddd82d_Desktop_Top_Banner_1920x840%20-%202025-08-05T135007.093.jpg",
+  "https://www.jdsports.cy/modules/bannersslider/images/1b31a4e221a33a61ff2a1f508c25f0dbf5805b31_Desktop_Middle_Banner.jpg",
+  "https://www.jdsports.cy/modules/bannersslider/images/286449971ed304b458f8ae35d5f5ab869c1dfe6a_Desktop_Middle_Banner_1704x740.jpg",
+  "https://www.jdsports.cy/modules/bannersslider/images/9fa16ae8965d4b6e39192a4e1eb3793ebc58676e_dm.jpg",
 ];
 
 type Props = {};
 
-const Hero = (props: Props) => {
+const ShopNow = (props: Props) => {
   const swiperRef = useRef<any>(null);
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
@@ -46,7 +44,7 @@ const Hero = (props: Props) => {
   }, []);
 
   return (
-    <div className="relative flex gap-6 w-full aspect-[16/7] md:aspect-[16/6]">
+    <div className="relative container flex gap-6 w-full aspect-video md:aspect-[16/7]">
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={handleSlideChange}
@@ -60,9 +58,9 @@ const Hero = (props: Props) => {
         className="mySwiper !w-full !h-full"
         pagination={{
           clickable: true,
-          el: ".global-slider",
+          el: ".shop-now-slider",
           renderBullet(index, className) {
-            return `<span class="${className} global-slider__bullet"></span>`;
+            return `<span class="${className} shop-now-slider__bullet"></span>`;
           },
         }}
         navigation={{
@@ -73,7 +71,7 @@ const Hero = (props: Props) => {
         {sliderImages.map((obj, index: number) => (
           <SwiperSlide
             key={index}
-            className="w-full aspect-[16/7] md:aspect-[16/6]"
+            className="w-full aspect-video md:aspect-[16/7]"
           >
             <img
               src={obj}
@@ -84,7 +82,7 @@ const Hero = (props: Props) => {
         ))}
       </Swiper>
 
-      <div className="z-50 !absolute !bottom-6 !left-1/2 !-translate-x-1/2 global-slider"></div>
+      <div className="z-50 !absolute !bottom-6 !left-1/2 !-translate-x-1/2 shop-now-slider"></div>
 
       <button
         ref={prevRef}
@@ -105,7 +103,7 @@ const Hero = (props: Props) => {
 
       <motion.div
         whileTap={{ scale: 0.9 }}
-        className="z-30 absolute bottom-6 right-8 cursor-pointer flex justify-center items-center w-[200px] md:w-[260px] h-[60px] md:h-[80px] bg-white text-black hover:text-white hover:bg-black text-lg md:text-xl"
+        className="z-30 absolute bottom-5 right-5 cursor-pointer flex justify-center items-center w-[200px] h-[60px] bg-white text-black hover:text-white hover:bg-black"
       >
         <span>Shop Now</span>
       </motion.div>
@@ -113,4 +111,4 @@ const Hero = (props: Props) => {
   );
 };
 
-export default Hero;
+export default ShopNow;

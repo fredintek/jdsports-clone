@@ -8,3 +8,30 @@
   width: 90%;
   margin: 0 auto;
 }
+
+
+.global-slider, .shop-now-slider {
+  display: flex !important;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+  max-width: 600px !important;
+  width: 90% !important;
+  margin: 0 auto !important;
+}
+
+.global-slider .global-slider__bullet, .shop-now-slider .shop-now-slider__bullet {
+  background-color: white !important;
+  /* max-width: 80px !important; */
+  /* border-radius: 12px !important; */
+  height: 10px !important;
+  width: 10px !important;
+  margin: 0px !important
+}
+
+
+.global-slider .global-slider__bullet.swiper-pagination-bullet-active, .shop-now-slider .shop-now-slider__bullet.swiper-pagination-bullet-active {
+  background-color: black !important;
+  /* border-radius: 2px !important; */
+}
